@@ -3,9 +3,13 @@ import cv2
 trained_face_data = cv2.CascadeClassifier('haarcascade_fronatalface_defult.xml')
 
 #importing the image which we will detect the face.
-img = cv2.imread("pic.png")
+img = cv2.imread("poc.png")
 #turning the image to grayscale for the computer to read it well.
 grayscaled_img =cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+#detecting faces
+face_coordinates = trained_face_data.detectMultiScale
+print(face_coordinates)
 
 
 
